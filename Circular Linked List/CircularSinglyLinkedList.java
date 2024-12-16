@@ -44,17 +44,42 @@ public class CircularSinglyLinkedList {
       return;
     }
 
-    ListNode first =  last.next;
+    ListNode first = last.next;
     while(first != last) {
       System.out.print(first.data + " ");
       first = first.next;
     }
-    System.out.print(first.data);
+    System.out.println(first.data);
+  }
+
+  public void insertFirst(int data) {
+    ListNode temp = new ListNode(data);
+    if(last == null) {
+      last = temp;
+    } else {
+      temp.next = last.next;
+    }
+    last.next = temp;
+  }
+
+  public void insertLast(int data) {
+    ListNode temp = new ListNode(data);
+
+    if(last == null) {
+      last = temp;
+      last.next = last;
+    } else {
+      temp.next = last.next;
+      last.next = temp;
+      last = temp;
+    }
   }
   public static void main(String[] args) {
     
     CircularSinglyLinkedList csll = new CircularSinglyLinkedList();
     csll.createCircularLinkedList();
-    csll.display();    
+    csll.insertFirst(9);
+    csll.insertLast(18);
+    csll.display();
   }
 }
