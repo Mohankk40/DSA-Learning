@@ -2,5 +2,6 @@
 bufferead.txt
 linkedList.txt
 
-# Ignore all class files
+# Ignore all below type of files
 *.class
+*.pyc
