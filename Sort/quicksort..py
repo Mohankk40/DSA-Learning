@@ -11,6 +11,6 @@ def quicksort(arr):
       greater_than_pivot.append(i)
   return quicksort(less_than_pivot) + [pivot] + quicksort(greater_than_pivot)
 
-arr = [64,25, 12, 22,22, 11]
+arr = [64, 25, 12, 22,22, 11] 
 
 print(quicksort(arr))
