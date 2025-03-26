@@ -10,6 +10,7 @@ def binary_search(names, target):
       first = mid + 1
     else:
       last = mid - 1
+  return None
 
 names = ["Anjali", "Arjun", "Karthik", "Mohana", "Priya", "Ravi"]
 
